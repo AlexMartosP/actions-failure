@@ -14,7 +14,9 @@ jobs:
 
       - name: "Linting"
         id: lint
+        continue-on-error: true
         run: "npm run lint"
+        
 
       - name: "Checking if error"
         if: steps.lint.outcome != 'success'
