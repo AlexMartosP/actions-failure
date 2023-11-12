@@ -1,2 +1,2 @@
-const test = 2;
-console.log(test);
+const test = 2
+console.log(test)
