@@ -17,7 +17,6 @@ jobs:
       - name: "Linting"
         id: lint
         run: "npm run lint"
-        
 
       # - name: "Checking if error"
       #   if: steps.lint.outcome != 'success'
@@ -31,7 +30,7 @@ jobs:
       #     -d '{"body":"Hey, ${{github.actor}}!\nLooks like the code check failed. Could you run pnpm format:fix and push again?"}'
   printing:
     runs-on: ubuntu-latest
-    needs: ['testing']
+    needs: ["testing"]
     if: always() && contains(needs.testing.result, 'failure')
     steps:
       - name: "Checking if error"
